@@ -32,3 +32,10 @@ class Clientes:
                 Clientes.lista[indice].apellidoPaterno = apellidoPaterno
                 Clientes.lista[indice].apellidoMaterno = apellidoMaterno
                 return cliente
+    @staticmethod
+    def borrar(dni):
+        for indice,cliente in enumerate(Clientes.lista):
+            if cliente.dni == dni:
+                return Clientes.lista.pop(indice)
+                
+            
